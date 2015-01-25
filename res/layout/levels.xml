@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <Button
-        android:id="@+id/Button1"
+        android:id="@+id/medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -14,22 +14,22 @@
          />
 
     <Button
-        android:id="@+id/Button2"
+        android:id="@+id/easy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/Button1"
-        android:layout_alignLeft="@+id/Button1"
+        android:layout_above="@+id/medium"
+        android:layout_alignLeft="@+id/medium"
         android:layout_marginBottom="20dp"
         android:background="@drawable/easy"
         android:onClick="easy"
         />
 
     <Button
-        android:id="@+id/Button3"
+        android:id="@+id/hard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Button1"
-        android:layout_below="@+id/Button1"
+        android:layout_alignLeft="@+id/medium"
+        android:layout_below="@+id/medium"
         android:layout_marginTop="20dp"
         android:background="@drawable/hard"
         android:onClick="hard"

@@ -4,22 +4,35 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 
-public class Levels extends Activity{
-	public void onCreate(Bundle b){
+public class Levels extends Activity implements OnClickListener {
+
+	public void onCreate(Bundle b) {
 		super.onCreate(b);
 		setContentView(R.layout.levels);
+		
+		findViewById(R.id.easy).setOnClickListener(this);
+		findViewById(R.id.medium).setOnClickListener(this);
+		findViewById(R.id.hard).setOnClickListener(this);
 	}
-	public void easy(View v){
-		Intent i = new Intent(this, Easy.class);
-		startActivity(i);
-	}
-	public void medium(View v){
-		Intent i = new Intent(this, Medium.class);
-		startActivity(i);
-	}
-	public void hard(View v){
-		Intent i = new Intent(this, Hard.class);
-		startActivity(i);
+
+	@Override
+	public void onClick(View v) {
+		Intent intent = new Intent(Levels.this, Play.class);
+		switch (v.getId()) {
+			case R.id.easy:
+				intent.putExtra("numofdisks", 4);
+				break;
+	
+			case R.id.medium:
+				intent.putExtra("numofdisks", 5);
+				break;
+	
+			case R.id.hard:
+				intent.putExtra("numofdisks", 6);
+				break;
+		}
+		startActivity(intent);
 	}
 }
