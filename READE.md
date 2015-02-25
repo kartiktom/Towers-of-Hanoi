@@ -12,8 +12,9 @@ Towers of Hanoi is a mathematical game or puzzle. It consists of three rods, and
 1. Move all the disks to either center or right tower.
 2. Only one disk can be moved at a time.
 3. No disk can be placed on the smaller disk.
-4. You win, if you take minimum possible moves to complete.  
-    minimum possible moves = 2^n - 1; n = number of disks
+4. You win, if you take minimum possible moves to complete.
+
+<pre>minimum possible moves = 2^n - 1; n = number of disks</pre>
 
 ![alt tag](https://github.com/ashokgujju/Towers-of-Hanoi/blob/master/res/drawable/screenshot2.png)
 ![alt tag](https://github.com/ashokgujju/Towers-of-Hanoi/blob/master/res/drawable/screenshot1.png)
