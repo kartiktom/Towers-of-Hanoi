@@ -35,17 +35,19 @@ public class Play extends Activity {
 	public void showDialog() {
 		AlertDialog.Builder alert = new AlertDialog.Builder(this);
 		alert.setTitle("Game Over");
+		
 		if (totalMoves > minPossibleMoves)
 			alert.setMessage("Least possible moves are " + minPossibleMoves
 					+ ", you made " + totalMoves + ".");
-		else {
+		else
 			alert.setMessage("You won, congrats!!!!");
-			alert.setPositiveButton("Back", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int whichButton) {
-					finish();
-				}
-			});
-		}
+
+		alert.setPositiveButton("Back", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int whichButton) {
+				finish();
+			}
+		});
+		
 		alert.create().show();
 	}
 }
